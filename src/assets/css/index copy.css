@@ -1,0 +1,213 @@
+.top-banner {
+  width: 100%;
+  height: 3.771rem;
+  background: url('../img/img_header.png') no-repeat fixed;
+  background-size: 100% 3.771rem;
+  margin-bottom: 2.104rem;
+}
+
+.my-card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  background-color: rgba(0, 0, 140, 0.3);
+}
+
+.my-card-left-h {
+  height: 20rem;
+
+}
+
+.my-card-middle-h {
+  height: 12.6875rem;
+}
+
+.my-card-right-h {
+  height: 20rem;
+}
+
+.my-col-right-mw {
+  max-width: 12.3655rem;
+}
+
+.my-header-title {
+  font-size: 0.88rem;
+  color: #1E79E3;
+  white-space: nowrap;
+}
+
+.my-card-header {
+  background: url("../img/img_title_header.png") no-repeat;
+  background-size: 8.1560rem 3.8587rem;
+  background-position: -0.4384rem -0.4384rem;
+  height: 3rem;
+}
+
+.header-arrow {
+  background: url("../img/ic_arrow_right.png") no-repeat;
+  background-size: 0.9208rem 0.5262rem;
+  width: 0.9208rem;
+  height: 0.5262rem;
+}
+
+.header-arrow:hover {
+  cursor: pointer;
+}
+
+.my-card-header img {
+  width: 0.9208rem;
+}
+
+.my-card-body {
+  white-space: nowrap;
+  font-size: 0.614rem;
+}
+
+.my-card-body img {
+  height: 0.6rem;
+  width: 0.4385rem;
+}
+
+.my-card-body .my-dark-bg {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.my-card-body .my-orange-bg {
+  background: #FF7F00;
+}
+
+.my-card-body .my-card-item:hover {
+  cursor: pointer;
+}
+
+.my-card-body .title {
+  max-width: 10rem;
+  font-size: 0.614rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #FFF;
+}
+
+.my-card-body .info {
+  font-size: 0.614rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.my-card-body .info1 {
+  font-size: 0.614rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.my-big-title {
+  color: #FFF;
+  font-size: 0.614rem;
+  word-wrap: break-word;
+}
+
+.my-big-number-green {
+  font-size: 1.84rem;
+  font-weight: bold;
+  color: #11E59c;
+}
+
+.my-big-number-green::after {
+  content: '家';
+  color: #FFF;
+  font-size: 0.614rem;
+}
+
+.my-big-number-blue {
+  font-size: 1.84rem;
+  font-weight: bold;
+  color: #00C0FF;
+}
+
+.my-big-number-blue::after {
+  content: '亿元';
+  color: #FFF;
+  font-size: 0.614rem;
+}
+
+.chart-circle-index {
+  width: 3.4rem;
+  height: 3.4rem;
+}
+
+.park-name-list div {
+  max-width: 8rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.article .detail {
+  width: 12rem;
+}
+
+.article .title {
+  max-width: 10.5rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #FFF;
+}
+
+.article .info {
+  max-width: 9rem;
+}
+
+.article .icon {
+  background: url("../img/ic_article.png") no-repeat;
+  background-size: 0.4385rem 0.6rem;
+  background-position: 0.2rem 0.25rem;
+  height: 2rem;
+  width: 1rem;
+}
+
+.article .icon1 {
+  background: url("../img/ic_article.png") no-repeat;
+  background-size: 0.4385rem 0.6rem;
+  background-position: 0.2rem 0.25rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+.request .title {
+  max-width: 10.5rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #FFF;
+}
+
+.request .icon {
+  background: #FF7F00;
+  padding: 0.01rem 0.2rem;
+}
+
+.request .icon::after {
+  content: '需求';
+  color: #fff;
+  white-space: nowrap;
+
+}
+
+.chart-gdp {
+  width: 100%;
+  height: 7rem;
+}
+
+.map-china {
+  width: 100%;
+  height: 25rem;
+}
+
+.chart-trend {
+  width: 100%;
+  height: 8rem;
+}
+
+.chart-right {
+  width: 100%;
+  height: 17rem;
+}

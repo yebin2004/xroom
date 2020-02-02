@@ -9,15 +9,15 @@
 import optionUtil from '../utils/chart-option';
 export default {
   name: 'chartCompat',
-  data: function() {
-    return {};
-  },
-  mounted: function() {
-    this.initChart();
+  props: { chartData: Array },
+  watch: {
+    chartData: function() {
+      this.initChart(this.chartData);
+    }
   },
   methods: {
-    initChart: function() {
-      let option = optionUtil.setOptionData(this.$echarts);
+    initChart: function(chartData) {
+      let option = optionUtil.setOptionData(this.$echarts, chartData);
       var chartCredit = this.$echarts.init(document.getElementById('chartCredit'));
       option.yAxis[1].axisLabel.textStyle.color = function(value, index) {
         if (option.data[index].value > 80) {
@@ -67,7 +67,14 @@ export default {
       };
       option.yAxis[1].axisLabel.color = '#916a39';
       chartCredit.setOption(option);
-
+      chartCredit.on('click', function(params) {
+        // console.log('click event');
+        if (params.componentType === 'series') {
+          if (params.seriesType === 'bar') {
+            window.location.href = '/ente-credit';
+          }
+        }
+      });
       window.addEventListener('resize', () => {
         chartCredit.resize();
       });

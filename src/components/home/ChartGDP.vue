@@ -8,14 +8,14 @@
 <script>
 export default {
   name: 'chartGDP',
-  data: function() {
-    return {};
-  },
-  mounted: function() {
-    this.initChart();
+  props: { proportion: Number },
+  watch: {
+    proportion: function() {
+      this.initChart(this.proportion);
+    }
   },
   methods: {
-    initChart: function() {
+    initChart: function(chartData) {
       //环状图
       // 圆环图各环节的颜色
       var color = ['#16465d', '#916a39'];
@@ -23,11 +23,11 @@ export default {
       // 圆环图各环节的名称和值(系列中各数据项的名称和值)
       var data = [
         {
-          value: 65,
+          value: 100 - chartData,
           name: '其他'
         },
         {
-          value: 35,
+          value: chartData,
           name: '军民融合企业'
         }
       ];
@@ -50,7 +50,7 @@ export default {
         // 系列列表
         series: [
           {
-            name: '圆环图系列名称', // 系列名称
+            name: '军民融合企业营收占GDP比重', // 系列名称
             type: 'pie', // 系列类型
             center: ['50%', '50%'], // 饼图的中心（圆心）坐标，数组的第一项是横坐标，第二项是纵坐标。[ default: ['50%', '50%'] ]
             radius: ['55%', '80%'], // 饼图的半径，数组的第一项是内半径，第二项是外半径。[ default: [0, '75%'] ]
@@ -66,7 +66,7 @@ export default {
               emphasis: {
                 show: true, // 是否显示标签[ default: false ]
                 position: 'outside', // 标签的位置。'outside'饼图扇区外侧，通过视觉引导线连到相应的扇区。'inside','inner' 同 'inside',饼图扇区内部。'center'在饼图中心位置。
-                formatter: '{c}%' // 标签内容
+                formatter: '{c}%\n{b}' // 标签内容
               }
             },
             labelLine: {
@@ -93,6 +93,10 @@ export default {
       };
       var chartGDP = this.$echarts.init(document.getElementById('chartGDP'));
       chartGDP.setOption(option);
+
+      window.addEventListener('resize', () => {
+        chartGDP.resize();
+      });
     }
   }
 };

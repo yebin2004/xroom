@@ -1,55 +1,7 @@
 export default {
-  setOptionData: function (echarts) {
-    var data = [{
-        name: '中核集团',
-        value: (Math.random() * 100).toFixed(0),
-        sum: 100
-      },
-      {
-        name: '航天科技',
-        value: (Math.random() * 100).toFixed(0),
-        sum: 100
-      },
-      {
-        name: '航天科工',
-        value: (Math.random() * 100).toFixed(0),
-        sum: 100
-      },
-      {
-        name: '航天工业',
-        value: (Math.random() * 100).toFixed(0),
-        sum: 100
-      },
-      {
-        name: '中国航发',
-        value: (Math.random() * 10).toFixed(0),
-        sum: 10
-      },
-      {
-        name: '中国船舶',
-        value: (Math.random() * 100).toFixed(0),
-        sum: 100
-      },
-      {
-        name: '中国兵工',
-        value: (Math.random() * 10).toFixed(0),
-        sum: 10
-      },
-      {
-        name: '中国兵装',
-        value: (Math.random() * 10).toFixed(0),
-        sum: 10
-      }, {
-        name: '中国电科',
-        value: (Math.random() * 100).toFixed(0),
-        sum: 100
-      },
-      {
-        name: '中国电子',
-        value: (Math.random() * 100).toFixed(0),
-        sum: 100
-      }
-    ];
+  setOptionData: function (echarts, chartData) {
+
+    var data = Array.from(chartData);
     let getArrByKey = (data, k) => {
       let key = k || "value";
       let res = [];
@@ -65,13 +17,14 @@ export default {
       return b.value - a.value
     });
 
-    let option = {
+    var option = {
+      //backgroundColor: '#000',
       data: data,
       grid: {
         top: '2%',
         bottom: -15,
-        right: 30,
-        left: -30,
+        right: 15,
+        left: -50,
         containLabel: true
       },
       xAxis: {
@@ -95,15 +48,16 @@ export default {
           interval: 0,
           color: '#fff',
           align: 'left',
-          margin: 80,
+          margin: 65,
           fontSize: 13,
           formatter: function (value) {
-            return '{title|' + value + '}'
+            //return '{title|' + value + '}'
+            return value
           },
 
           rich: {
             title: {
-              width: '1%'
+              width: '10%'
             }
           }
         },
@@ -111,7 +65,7 @@ export default {
         triggerEvent: true,
         show: true,
         inverse: true,
-        data: getArrByKey(data, 'name'),
+        data: getArrByKey(data, 'value'),
         axisLine: {
           show: false
         },
@@ -124,10 +78,10 @@ export default {
         axisLabel: {
           interval: 0,
           align: 'left',
-          margin: 20,
+          margin: 0,
           fontSize: 13,
-          formatter: function (value, index) {
-            return data[index].value
+          formatter: function (value) {
+            return value
           },
           textStyle: {
             color: function () {
@@ -143,7 +97,6 @@ export default {
         data: data,
         barWidth: 7,
         itemStyle: {
-
           color: new echarts.graphic.LinearGradient(
             0, 0, 1, 0,
             [{
@@ -161,5 +114,49 @@ export default {
       }]
     }
     return option
+  },
+
+  createChartData: function () {
+    var data = [{
+        name: '中核集团',
+        value: (Math.random() * 100).toFixed(0)
+      },
+      {
+        name: '航天科技',
+        value: (Math.random() * 100).toFixed(0)
+      },
+      {
+        name: '航天科工',
+        value: (Math.random() * 100).toFixed(0)
+      },
+      {
+        name: '航天工业',
+        value: (Math.random() * 100).toFixed(0)
+      },
+      {
+        name: '中国航发',
+        value: (Math.random() * 100).toFixed(0)
+      },
+      {
+        name: '中国船舶',
+        value: (Math.random() * 100).toFixed(0)
+      },
+      {
+        name: '中国兵工',
+        value: (Math.random() * 100).toFixed(0)
+      },
+      {
+        name: '中国兵装',
+        value: (Math.random() * 100).toFixed(0)
+      }, {
+        name: '中国电科',
+        value: (Math.random() * 100).toFixed(0)
+      },
+      {
+        name: '中国电子',
+        value: (Math.random() * 100).toFixed(0)
+      }
+    ];
+    return data
   }
 }

@@ -7,202 +7,103 @@
 
 <script>
 import '../../../node_modules/echarts/map/js/china.js';
+const cityCoordData = require('../../assets/mock/city-coord.json');
+const mockCityData = require('../../assets/mock/city.json');
+const mockCitySpecialData = require('../../assets/mock/city-special.json');
 export default {
   name: 'mapChina',
   data: function() {
-    return {};
+    return {
+      cityCoordData: cityCoordData,
+      cityList: mockCityData,
+      citySpecial: mockCitySpecialData
+    };
   },
   mounted: function() {
-    this.initChart();
+    this.initChart(this.cityCoordData, this.cityList, this.citySpecial);
   },
   methods: {
-    initChart: function() {
-      let randomData = function() {
-        return Math.round(Math.random() * 500);
-      };
+    initChart: function(cityCoordData, cityList, citySpecial) {
+      var geoCoordMap = cityCoordData;
 
-      let mydata = [
-        {
-          name: '北京',
-          value: randomData()
-        },
-        {
-          name: '天津',
-          value: randomData()
-        },
-        {
-          name: '上海',
-          value: randomData()
-        },
-        {
-          name: '重庆',
-          value: randomData()
-        },
-        {
-          name: '河北',
-          value: randomData()
-        },
-        {
-          name: '河南',
-          value: randomData()
-        },
-        {
-          name: '云南',
-          value: randomData()
-        },
-        {
-          name: '辽宁',
-          value: randomData()
-        },
-        {
-          name: '黑龙江',
-          value: randomData()
-        },
-        {
-          name: '湖南',
-          value: randomData()
-        },
-        {
-          name: '安徽',
-          value: randomData()
-        },
-        {
-          name: '山东',
-          value: randomData()
-        },
-        {
-          name: '新疆',
-          value: randomData()
-        },
-        {
-          name: '江苏',
-          value: randomData()
-        },
-        {
-          name: '浙江',
-          value: randomData()
-        },
-        {
-          name: '江西',
-          value: randomData()
-        },
-        {
-          name: '湖北',
-          value: randomData()
-        },
-        {
-          name: '广西',
-          value: randomData()
-        },
-        {
-          name: '甘肃',
-          value: randomData()
-        },
-        {
-          name: '山西',
-          value: randomData()
-        },
-        {
-          name: '内蒙古',
-          value: randomData()
-        },
-        {
-          name: '陕西',
-          value: randomData()
-        },
-        {
-          name: '吉林',
-          value: randomData()
-        },
-        {
-          name: '福建',
-          value: randomData()
-        },
-        {
-          name: '贵州',
-          value: randomData()
-        },
-        {
-          name: '广东',
-          value: randomData()
-        },
-        {
-          name: '青海',
-          value: randomData()
-        },
-        {
-          name: '西藏',
-          value: randomData()
-        },
-        {
-          name: '四川',
-          value: randomData()
-        },
-        {
-          name: '宁夏',
-          value: randomData()
-        },
-        {
-          name: '海南',
-          value: randomData()
-        },
-        {
-          name: '台湾',
-          value: randomData()
-        },
-        {
-          name: '香港',
-          value: randomData()
-        },
-        {
-          name: '澳门',
-          value: randomData()
+      var convertData = function(data) {
+        var res = [];
+        for (var i = 0; i < data.length; i++) {
+          var geoCoord = geoCoordMap[data[i].name];
+          if (geoCoord) {
+            res.push({
+              name: data[i].name,
+              value: geoCoord.concat(data[i].value)
+            });
+          }
         }
-      ];
+        return res;
+      };
 
       let option = {
         tooltip: {
-          trigger: 'item'
+          trigger: 'item',
+          formatter: function(params) {
+            return params.name + ' : ' + params.value[2];
+          }
         },
+
         visualMap: {
           show: false,
-          x: 'left',
-          y: 'bottom',
-          splitList: [
-            {
-              start: 500,
-              end: 600
-            },
-            {
-              start: 400,
-              end: 500
-            },
-            {
-              start: 300,
-              end: 400
-            },
-            {
-              start: 200,
-              end: 300
-            },
-            {
-              start: 100,
-              end: 200
-            },
-            {
-              start: 0,
-              end: 100
+          min: 0,
+          max: 500,
+          calculable: true,
+          color: ['#d94e5d', '#eac736', '#50a3ba'],
+          textStyle: {
+            color: '#fff'
+          }
+        },
+        geo: {
+          /*  left: 0,
+          top: 0,
+          right: 0,
+          bottom: 5, */
+          layoutCenter: ['50%', '50%'],
+          // 如果宽高比大于 1 则宽度为 100，如果小于 1 则高度为 100，保证了不超过 100x100 的区域
+          layoutSize: '125%',
+          roam: true,
+          map: 'china',
+          label: {
+            emphasis: {
+              show: true
             }
-          ],
-          color: ['#0b3570', '#093267', '#12448c', '#1253a6', '#155fb1', '#207ace']
+          },
+          itemStyle: {
+            normal: {
+              areaColor: {
+                // 地图区域的颜色
+                type: 'radial', // 径向渐变
+                x: 0.5, // 圆心 x,y
+                y: 0.5,
+                r: 0.8, // 半径
+                colorStops: [
+                  {
+                    offset: 0,
+                    color: '#0b3570' // 0% 处的颜色
+                  },
+                  {
+                    offset: 1,
+                    color: '#207ace' // 100% 处的颜色
+                  }
+                ],
+                globalCoord: false // 缺省为 false
+              }
+            }
+          }
         },
         series: [
           {
-            name: '随机数据',
-            type: 'map',
-            mapType: 'china',
-            roam: true,
-            zoom: 1.2,
+            zoom: 1.5,
+            name: 'pm2.5',
+            type: 'scatter',
+            coordinateSystem: 'geo',
+            data: convertData(cityList),
+            symbolSize: 10,
             label: {
               normal: {
                 show: false
@@ -211,16 +112,44 @@ export default {
                 show: false
               }
             },
-            data: mydata
+            itemStyle: {
+              emphasis: {
+                borderColor: '#fff',
+                borderWidth: 1
+              }
+            }
+          },
+          {
+            zoom: 1.5,
+            name: 'pm2.5',
+            type: 'scatter',
+            coordinateSystem: 'geo',
+            data: convertData(citySpecial),
+
+            symbolSize: 20,
+            label: {
+              normal: {
+                show: false
+              },
+              emphasis: {
+                show: false
+              }
+            },
+            itemStyle: {
+              emphasis: {
+                borderColor: '#fff',
+                borderWidth: 1
+              }
+            }
           }
         ]
       };
-      var mapChina = this.$echarts.init(document.getElementById('mapChina'));
-      mapChina.setOption(option);
+      var chart = this.$echarts.init(document.getElementById('mapChina'));
+      chart.setOption(option);
 
-      /* window.addEventListener('resize', () => {
-        mapChina.resize()
-      }) */
+      window.addEventListener('resize', () => {
+        chart.resize();
+      });
     }
   }
 };

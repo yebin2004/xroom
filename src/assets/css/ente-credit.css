@@ -1,0 +1,76 @@
+.ente-name {
+  font-size: 1.0672rem;
+  color: #666;
+}
+
+.ente-label {
+  color: #007fff;
+  font-size: 0.8893rem;
+}
+
+.ente-rating {
+  background-color: #2db200;
+  color: #fff;
+  font-size: 0.8893rem;
+}
+
+.ente-card {
+  font-size: 0.7115rem;
+  color: #333;
+}
+
+.ente-info-label {
+  color: #999;
+
+}
+
+.ente-info-label::after {
+  content: '：'
+}
+
+.subject-card {
+  min-height: 15.8181rem;
+}
+
+.subject-card .sub-label {
+  font-size: 0.8004rem;
+  color: #999;
+}
+
+.w-30 {
+  width: 30% !important;
+}
+
+.w-45 {
+  width: 45% !important;
+}
+
+.subject-table {
+  border-collapse: collapse;
+  border: 1px solid #dee2e6;
+}
+
+.subject-table th,
+.subject-table td {
+  padding: 0.3rem;
+  border: 1px solid #dee2e6;
+}
+
+.subject-table th {
+  background-color: #fcfcfc;
+  color: #666;
+  font-weight: normal;
+}
+
+.shareholder,
+.member {
+  color: #007fff;
+}
+
+.subject-chart {
+  height: 11rem;
+}
+
+.business-scope {
+  line-height: 1.4rem;
+}

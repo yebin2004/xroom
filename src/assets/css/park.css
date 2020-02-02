@@ -1,0 +1,130 @@
+.requ-label {
+  color: #007fff;
+  font-size: 0.8893rem;
+}
+
+.requ-card {
+  font-size: 0.7115rem;
+  color: #333;
+}
+
+.chart-province {
+  height: 26.6777rem;
+}
+
+.park-introduction {
+  line-height: 1.2rem;
+  letter-spacing: 0.05rem;
+  color: #999;
+}
+
+.park-label {
+  color: #999
+}
+
+.park-label::after {
+  content: '：'
+}
+
+.match-item img {
+  height: 1.7786rem;
+  width: 1.7786rem;
+}
+
+.match-item .info {
+  color: #999
+}
+
+.match-name {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.match-value {
+  color: #ff7f00;
+}
+
+.match-value::before {
+  content: '匹配值：';
+  color: #999;
+}
+
+.ente-info-label {
+  color: #999;
+
+}
+
+.ente-info-label::after {
+  content: '：'
+}
+
+.ente-card .first-col {
+  min-width: 7.5rem;
+}
+
+.subject-card {
+  height: 15.8181rem;
+}
+
+.subject-card .sub-label {
+  font-size: 0.8004rem;
+  color: #999;
+}
+
+.w-30 {
+  width: 30% !important;
+}
+
+.w-45 {
+  width: 45% !important;
+}
+
+.subject-table {
+  border-collapse: collapse;
+  border: 1px solid #dee2e6;
+}
+
+.subject-table th,
+.subject-table td {
+  padding: 0.3rem;
+  border: 1px solid #dee2e6;
+}
+
+.subject-table th {
+  background-color: #fcfcfc;
+  color: #666;
+  font-weight: normal;
+}
+
+.shareholder,
+.member {
+  color: #007fff;
+}
+
+.subject-card-list .info-icon {
+  background: url("../img/ic_article.png") no-repeat;
+  background-size: 0.4385rem 0.6rem;
+  background-position: 0.0rem 0.25rem;
+  height: 1rem;
+  width: 0.7rem;
+}
+
+.subject-card-list .post-date {
+  color: #999;
+}
+
+.subject-card-list .title {
+  color: #333333;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.subject-chart {
+  height: 11rem;
+}
+
+.business-scope {
+  line-height: 1.4rem;
+}

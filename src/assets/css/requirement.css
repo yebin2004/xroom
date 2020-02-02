@@ -1,0 +1,69 @@
+.requ-label {
+  color: #007fff;
+  font-size: 0.8893rem;
+}
+
+.requ-card {
+  font-size: 0.7115rem;
+  color: #666;
+}
+
+.project-name {
+  font-size: 1.4229rem;
+  color: #333;
+}
+
+.project-budget {
+  font-size: 1.4229rem;
+  color: #ff7f00;
+  font-weight: bold;
+}
+
+.project-budget::before {
+  content: '预算';
+  padding-right: 0.25rem;
+  font-size: 0.7115rem;
+  color: #666;
+  font-weight: normal;
+}
+
+.project-budget::after {
+  content: '万'
+}
+
+.project-content {
+  line-height: 1.2rem;
+  letter-spacing: 0.05rem;
+}
+
+.project-label {
+  color: #999
+}
+
+.project-label::after {
+  content: '：'
+}
+
+.match-item img {
+  height: 1.7786rem;
+  width: 1.7786rem;
+}
+
+.match-item .info {
+  color: #999
+}
+
+.match-name {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.match-value {
+  color: #ff7f00;
+}
+
+.match-value::before {
+  content: '匹配值：';
+  color: #999;
+}

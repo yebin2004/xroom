@@ -1,0 +1,157 @@
+  [{
+      "id": 1,
+      "name": "规模竞争力",
+      "code": "C1",
+      "index": "未定",
+      "items": [{
+        "name": "年末固定资产总值(万元)",
+        "value": null
+      }, {
+        "name": "当年总产值(亿元)",
+        "value": null
+      }, {
+        "name": "新产品产值(万元)",
+        "value": null
+      }, {
+        "name": "年末从业人数(人)",
+        "value": null
+      }, {
+        "name": "企业数(家)",
+        "value": null
+      }, {
+        "name": "平均劳动力资本额(万元/人)",
+        "value": null
+      }]
+    },
+    {
+      "id": 2,
+      "name": "效益竞争力",
+      "code": "C2",
+      "index": "未定",
+      "items": [{
+        "name": "全员劳动生产率(万元/人)",
+        "value": null
+      }, {
+        "name": "利润额(万元)",
+        "value": null
+      }, {
+        "name": "增加值(亿元)",
+        "value": null
+      }, {
+        "name": "增加值增长率(%)",
+        "value": null
+      }, {
+        "name": "利税额(万元)",
+        "value": null
+      }, {
+        "name": "利润增长率(%)",
+        "value": null
+      }]
+    },
+    {
+      "id": 3,
+      "name": "投融资竞争力",
+      "code": "C3",
+      "index": "未定",
+      "items": [{
+        "name": "投资额(万元)",
+        "value": null
+      }, {
+        "name": "投资回收期(年)",
+        "value": null
+      }, {
+        "name": "项目建成投产率(%)",
+        "value": null
+      }, {
+        "name": "固定资产交付使用率(%)",
+        "value": null
+      }, {
+        "name": "总投资收益(万元)",
+        "value": null
+      }, {
+        "name": "总投资收益率(%)",
+        "value": null
+      }, {
+        "name": "科技活动经费筹集额(万元)",
+        "value": null
+      }]
+    },
+    {
+      "id": 4,
+      "name": "市场竞争力",
+      "code": "C4",
+      "index": "未定",
+      "items": [{
+        "name": "产品销售收入(万元)",
+        "value": null
+      }, {
+        "name": "产品销售成本(万元)",
+        "value": null
+      }, {
+        "name": "产品销售收入增长率(%)",
+        "value": null
+      }, {
+        "name": "产品销售成本增长率(%)",
+        "value": null
+      }, {
+        "name": "新产品销售收入(万元)",
+        "value": null
+      }, {
+        "name": "新产品销售利润增长率(%)",
+        "value": null
+      }]
+    },
+    {
+      "id": 5,
+      "name": "学习竞争力",
+      "code": "C5",
+      "index": "未定",
+      "items": [{
+        "name": "科技工程师占从业人员比重(%)",
+        "value": null
+      }, {
+        "name": "员工培训费用人均数额(元)",
+        "value": null
+      }, {
+        "name": "培训费用占产品销售收入比重(%)",
+        "value": null
+      }, {
+        "name": "消化吸收经费占产品销售收入比重(%)",
+        "value": null
+      }, {
+        "name": "技术引进经费占产品销售收入比重(%)",
+        "value": null
+      }, {
+        "name": "平均资本投入产出比",
+        "value": null
+      }]
+    },
+    {
+      "id": 6,
+      "name": "持续创新竞争力",
+      "code": "C6",
+      "index": "未定",
+      "items": [{
+        "name": "申请专利数(项)",
+        "value": null
+      }, {
+        "name": "拥有发明专利数(项)",
+        "value": null
+      }, {
+        "name": "新产品产值占当年总产值比重(%)",
+        "value": null
+      }, {
+        "name": "R&D经费内部支出(万元)",
+        "value": null
+      }, {
+        "name": "R&D经费支出占产品销售收入比重(%)",
+        "value": null
+      }, {
+        "name": "科技工程师占科技人员比重(%)",
+        "value": null
+      }, {
+        "name": "R&D投入产出比",
+        "value": null
+      }]
+    }
+  ]

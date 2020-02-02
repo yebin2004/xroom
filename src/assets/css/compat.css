@@ -1,0 +1,88 @@
+.main-index {
+  height: 8.004rem;
+  width: 8.004rem;
+  border: 0.5rem solid #f5f5f5;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+.main-index .main-index-number {
+  color: #ff7f00;
+  font-size: 2.4901rem;
+}
+
+.main-index .main-index-name {
+  color: #666666;
+  font-size: 0.7114rem;
+}
+
+.new-main-index {
+  
+}
+
+
+.new-main-index .main-index-number {
+  font-size: 1.5118rem;
+  height: 6.1363rem;
+  width: 4.7134rem;
+  text-align:center;
+  line-height: 5rem;
+  font-weight: bold;
+}
+
+.new-main-index .main-index-number-a {
+  color: #00ffff;
+  background-image: url('../img/bg_core_a.png');
+  background-size: 4.7134rem 6.1363rem;
+}
+
+.new-main-index .main-index-number-b {
+  color: #fff;
+  background-image: url('../img/bg_core_b.png');
+  background-size: 4.7134rem 6.1363rem;
+}
+
+.new-main-index .main-index-name {
+  color: #666666;
+  font-size: 0.7114rem;
+}
+
+
+.compat-card {
+  height: 20.4544rem;
+  width: 12.2282rem;
+  background-image: url('../img/bg_bluebox.png');
+  background-size: 12.2282rem 20.4544rem;
+   white-space: nowrap;
+}
+
+.ente-compat-card {
+  height: 18.7865rem;
+  /* width: 16.6303rem; */
+  width: 100%;
+  background-image: url('../img/bg_bluebox.png');
+  background-size: 100% 18.7865rem;
+}
+
+.compat-card .compat-card-title {
+  color: #ffffff;
+  font-size: 1.0672rem;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.compat-card .item-name {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.7775rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.compat-card .item-number {
+  color: #ff7f00;
+  font-size: 1.4223rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

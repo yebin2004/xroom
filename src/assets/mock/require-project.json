@@ -1,0 +1,102 @@
+{
+  "projectName": "大型修井作业机自动化解决方案及油管接箍检测技术",
+  "projectBudget": "20",
+  "projectDate": "2019/12/01 08:30",
+  "projectContent": "<p>小型修井作业机自动化解决方案中，很重要的一个环节是起下油管的自动化操作，但是由于油管的长度不等，作业现场条件十分恶劣等不利因素，导致判断油管接箍位置比较困难，进而无法实现旗下油管的自动化操作。</p><p>为了解决油管接箍检测问题，需要制作一种接箍检测传感器，传感器外形为空心环形，置于井口上方，油管从传感器内通过，油管接箍到达时传感器信号产生明显变化，通过变化的量值进行油管接箍判断。</p><p>  要求接箍检测装置具有耐油耐污耐振、防爆、在油管有大幅晃动时保证信号准确、稳定等特点，可同时检测16-22mm抽油杆接箍和3寸、3寸半油管接箍，传感器最好采用非接触式测量方法，减少因机械碰撞导致的传感器损坏。</p>",
+  "type": "所属军种",
+  "area": "所属领域",
+  "contact": "13011122233",
+  "region": "辽宁/盘锦",
+  "enteRecommend": [{
+      "matchName": "1VAM扣由管接箍，达利普油管大号",
+      "area": "化工",
+      "matchValue": "88.7"
+    },
+    {
+      "matchName": "2VAM扣由管接箍，达利普油管大号",
+      "area": "化工",
+      "matchValue": "88.7"
+    },
+    {
+      "matchName": "3VAM扣由管接箍，达利普油管大号",
+      "area": "化工",
+      "matchValue": "88.7"
+    },
+    {
+      "matchName": "4VAM扣由管接箍，达利普油管大号",
+      "area": "化工",
+      "matchValue": "88.7"
+    },
+    {
+      "matchName": "5VAM扣由管接箍，达利普油管大号",
+      "area": "化工",
+      "matchValue": "88.7"
+    },
+    {
+      "matchName": "6VAM扣由管接箍，达利普油管大号",
+      "area": "化工",
+      "matchValue": "88.7"
+    },
+    {
+      "matchName": "7VAM扣由管接箍，达利普油管大号",
+      "area": "化工",
+      "matchValue": "88.7"
+    },
+    {
+      "matchName": "8VAM扣由管接箍，达利普油管大号",
+      "area": "化工",
+      "matchValue": "88.7"
+    },
+    {
+      "matchName": "9VAM扣由管接箍，达利普油管大号",
+      "area": "化工",
+      "matchValue": "88.7"
+    }
+  ],
+  "prodRecommend": [{
+      "matchName": "1VAM扣由管接箍，达利普油管大号",
+      "area": "化工",
+      "matchValue": "88.7"
+    },
+    {
+      "matchName": "2VAM扣由管接箍，达利普油管大号",
+      "area": "化工",
+      "matchValue": "88.7"
+    },
+    {
+      "matchName": "3VAM扣由管接箍，达利普油管大号",
+      "area": "化工",
+      "matchValue": "88.7"
+    },
+    {
+      "matchName": "4VAM扣由管接箍，达利普油管大号",
+      "area": "化工",
+      "matchValue": "88.7"
+    },
+    {
+      "matchName": "5VAM扣由管接箍，达利普油管大号",
+      "area": "化工",
+      "matchValue": "88.7"
+    },
+    {
+      "matchName": "6VAM扣由管接箍，达利普油管大号",
+      "area": "化工",
+      "matchValue": "88.7"
+    },
+    {
+      "matchName": "7VAM扣由管接箍，达利普油管大号",
+      "area": "化工",
+      "matchValue": "88.7"
+    },
+    {
+      "matchName": "8VAM扣由管接箍，达利普油管大号",
+      "area": "化工",
+      "matchValue": "88.7"
+    },
+    {
+      "matchName": "9VAM扣由管接箍，达利普油管大号",
+      "area": "化工",
+      "matchValue": "88.7"
+    }
+  ]
+}

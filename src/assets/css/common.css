@@ -1,0 +1,254 @@
+html,
+body {
+  height: 100%;
+}
+
+.container-second {
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 4.4466rem;
+}
+
+/* Custom page header */
+.header {
+  padding-bottom: 1rem;
+}
+
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 3.1126rem;
+  width: 20.0987rem;
+  color: #FFF;
+  background-image: url('../img/logo.png');
+  background-size: 20.0987rem 3.1126rem;
+}
+
+.header .my-nav-link {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: #FFF;
+}
+
+.header .my-nav-icon {
+  display: inline-block;
+  height: rem;
+  width: 0.8893rem;
+  height: 0.8893rem
+}
+
+.header .my-nav-icon-home {
+  background-image: url('../img/ic_home.png');
+  background-size: 0.8893rem 0.8893rem;
+}
+
+.header .my-nav-icon-user {
+  background-image: url('../img/ic_user.png');
+  background-size: 0.8893rem 0.8893rem;
+}
+
+.header .my-nav-icon-esc {
+  background-image: url('../img/ic_esc.png');
+  background-size: 0.8893rem 0.8893rem;
+}
+
+.header .my-nav-link span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+
+/* Custom page footer */
+.footer {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  color: #777;
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap; */
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-scroller .nav-link {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: .75rem;
+  color: #FFF;
+}
+
+.nav-scroller .my-nav-link {
+  font-size: .75rem;
+  color: #FFF !important;
+  line-height: 1.5rem;
+  height: 1.5rem;
+  padding: 0 0.5rem;
+}
+
+.nav-scroller .selected {
+  background: #FF7F00;
+}
+
+.my-orange-bg {
+  background: #FF7F00;
+}
+
+.nav-search {
+  position: relative;
+  z-index: 2;
+  overflow-y: hidden;
+  bottom: 0;
+
+}
+
+.nav-search .my-navbar-brand {
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 2.215rem;
+  font-weight: normal;
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+.my-search-bar {
+  display: inline-block;
+  font-size: 0.75rem;
+}
+
+.my-search-bar .search-icon {
+  display: inline-block;
+  border-top-left-radius: 1.0rem !important;
+  border-bottom-left-radius: 1.0rem !important;
+  background-color: #eeeeee;
+  padding: 0 0.6rem;
+  height: 1.8rem;
+  line-height: 1.8rem;
+  border: 0;
+}
+
+.my-search-bar i {
+  color: #dbdbdb;
+}
+
+.my-search-bar input {
+  height: 1.8rem;
+  background-color: #eeeeee;
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  line-height: 1.8rem;
+  color: #495057;
+  background-color: #eeeeee;
+  outline-style: none;
+  outline: none;
+  border: 0;
+  border-top-right-radius: 1.0rem;
+  border-bottom-right-radius: 1.0rem;
+
+}
+
+.my-search-bar input::placeholder {
+  color: #dbdbdb;
+  opacity: 1;
+}
+
+.my-search-bar button,
+.search-button {
+  border: 0;
+  background-color: darkblue;
+  color: #FFF;
+  border-radius: 1.0rem;
+  padding: 0 1.2rem;
+  outline: none;
+}
+
+.search-button:focus {
+  outline: 0;
+}
+
+.search-button {
+  font-size: 0.75rem;
+}
+
+.search-icon {
+  background: url("../img/ic_search.png") no-repeat;
+  background-size: 0.9782rem 0.9782rem;
+  background-position: 0.5rem 0.5rem;
+  width: 1.5rem;
+}
+
+.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+footer {
+  background: #142583;
+  height: 4.4466rem;
+  line-height: 4.4466rem;
+  font-size: 0.6225rem;
+  color: #999999;
+}
+
+.main-name {
+  font-size: 0.6225rem;
+  color: #007fff;
+}
+
+.breadcrumb-item {
+  font-size: 0.7115rem !important;
+  color: #333;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+
+  content: ">" !important;
+}
+
+.icon-title-info {
+  font-size: 0.7115rem;
+  white-space: nowrap;
+}
+
+.icon-title-info .icon-title,
+.icon-title-info .info {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.icon-title-info .icon-title {
+  color: #333333;
+}
+
+.icon-title-info .icon-title::before {
+  content: '\00a0\00a0\00a0';
+  background: url("../img/ic_article.png") no-repeat;
+  background-size: 0.4385rem 0.6rem;
+  background-position: 0.2rem 0.25rem;
+}
+
+.icon-title-info .info {
+  color: rgba(0, 0, 0, 0.5)
+}
+
+/* Customize container */

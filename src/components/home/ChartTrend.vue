@@ -8,14 +8,14 @@
 <script>
 export default {
   name: 'chartTrend',
-  data: function() {
-    return {};
+  props: {
+    chartData: Object
   },
   mounted: function() {
-    this.initChart();
+    this.initChart(this.chartData);
   },
   methods: {
-    initChart: function() {
+    initChart: function(chartData) {
       let option = {
         tooltip: {
           trigger: 'axis',
@@ -31,7 +31,7 @@ export default {
           bottom: '20'
         },
         legend: {
-          data: ['参军企业', '军费支出'],
+          data: chartData.legendData,
           right: 60,
           top: 0,
           textStyle: {
@@ -44,7 +44,7 @@ export default {
         xAxis: [
           {
             type: 'category',
-            data: ['09年', '10年', '11年', '12年', '13年', '14年', '15年', '16年'],
+            data: chartData.xData,
             axisPointer: {
               type: 'shadow'
             },
@@ -112,9 +112,9 @@ export default {
         ],
         series: [
           {
-            name: '参军企业',
+            name: chartData.legendData[0],
             type: 'bar',
-            data: [800, 1300, 2280, 2800, 3001, 3100, 3600, 3999],
+            data: chartData.y0Data,
             barWidth: 10,
             itemStyle: {
               normal: {
@@ -134,10 +134,10 @@ export default {
           },
 
           {
-            name: '军费支出',
+            name: chartData.legendData[1],
             type: 'line',
             yAxisIndex: 1,
-            data: [1800, 2500, 2550, 3000, 3900, 2800, 2888, 3500],
+            data: chartData.y1Data,
             showAllSymbol: true,
             symbol: 'circle',
             symbolSize: 6,
@@ -161,6 +161,9 @@ export default {
       };
       var chartTrend = this.$echarts.init(document.getElementById('chartTrend'));
       chartTrend.setOption(option);
+      window.addEventListener('resize', () => {
+        chartTrend.resize();
+      });
     }
   }
 };

@@ -6,14 +6,20 @@
     </div>
     <!--/.card-header-->
     <div class="my-card-body py-2 pl-2 pr-1">
-      <ChartTrend></ChartTrend>
+      <ChartTrend v-bind:chart-data="chartData"></ChartTrend>
     </div>
   </div>
 </template>
 <script>
 import ChartTrend from './ChartTrend.vue';
+const mockTrendData = require('../../assets/mock/ente-mili-trend.json');
 export default {
-  name: 'CardTrend',
+  name: 'cardTrend',
+  data: function() {
+    return {
+      chartData: mockTrendData
+    };
+  },
   components: {
     ChartTrend
   }
