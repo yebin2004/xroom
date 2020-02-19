@@ -22,10 +22,12 @@
 </template>
 <script>
 export default {
-  name: 'cardMember',
-  props: { memberList: Array },
+  name: 'CardMember',
+  props: { memberList: [] },
   computed: {
     newMemberList: function() {
+      if (this.memberList === undefined) return;
+      console.debug('length', this.memberList.length);
       let nmList = [];
       let index = 0;
       while (index < this.memberList.length) {

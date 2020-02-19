@@ -85,7 +85,6 @@
   </main>
 </template>
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
 import CardPaper from './CardPaper.vue';
 import CardRequest from './CardRequest.vue';
 import CardBigNumber from './CardBigNumber.vue';
@@ -99,9 +98,8 @@ import CardCredit from './CardCredit.vue';
 
 import BgHome from '../../assets/img/bg_home.jpg';
 export default {
-  name: 'app',
+  name: 'App',
   components: {
-    // HelloWorld
     CardPaper,
     CardRequest,
     CardBigNumber,

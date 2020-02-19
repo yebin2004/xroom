@@ -1,0 +1,53 @@
+{
+  "competList": [{
+      "comId": 1,
+      "shortName": "中核集团",
+      "totalIncome": 999999
+    },
+    {
+      "comId": 2,
+      "shortName": "航天科技",
+      "totalIncome": 899999
+    },
+    {
+      "comId": 3,
+      "shortName": "航天科工",
+      "totalIncome": 799999
+    },
+    {
+      "comId": 4,
+      "shortName": "航天工业",
+      "totalIncome": 699999
+    },
+    {
+      "comId": 5,
+      "shortName": "中国航发",
+      "totalIncome": 599999
+    },
+    {
+      "comId": 6,
+      "shortName": "中国船舶",
+      "totalIncome": 499999
+    },
+    {
+      "comId": 7,
+      "shortName": "中国兵工",
+      "totalIncome": 399999
+    },
+    {
+      "comId": 8,
+      "shortName": "中国兵装",
+      "totalIncome": 299999
+    },
+    {
+      "comId": 9,
+      "shortName": "中国电科",
+      "totalIncome": 199999
+    },
+    {
+      "comId": 10,
+      "shortName": "中国电子",
+      "totalIncome": 99999
+    }
+  ]
+}

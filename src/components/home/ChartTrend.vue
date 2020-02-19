@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: 'chartTrend',
+  name: 'ChartTrend',
   props: {
     chartData: Object
   },
@@ -139,7 +139,7 @@ export default {
             yAxisIndex: 1,
             data: chartData.y1Data,
             showAllSymbol: true,
-            symbol: 'circle',
+            symbol: 'emptyCircle',
             symbolSize: 6,
             lineStyle: {
               normal: {
@@ -149,11 +149,7 @@ export default {
             },
             itemStyle: {
               normal: {
-                color: 'rgba(255,255,255,0.0)',
-                borderWidth: 3,
-                /*shadowColor: 'rgba(72,216,191, 0.3)',
-                shadowBlur: 100,*/
-                borderColor: '#93d8ac'
+                color: '#93d8ac'
               }
             }
           }

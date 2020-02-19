@@ -24,7 +24,7 @@ export default {
         top: '2%',
         bottom: -15,
         right: 15,
-        left: -50,
+        left: -40,
         containLabel: true
       },
       xAxis: {
@@ -78,7 +78,7 @@ export default {
         axisLabel: {
           interval: 0,
           align: 'left',
-          margin: 0,
+          margin: 5,
           fontSize: 13,
           formatter: function (value) {
             return value

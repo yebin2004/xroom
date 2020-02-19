@@ -9,11 +9,13 @@
 </template>
 <script>
 export default {
-  name: 'chartIP',
+  name: 'ChartIP',
   props: { ipList: Array },
-
-  mounted: function() {
-    this.initChart(this.ipList);
+  watch: {
+    ipList: function() {
+      if (this.ipList === undefined) return;
+      this.initChart(this.ipList);
+    }
   },
   methods: {
     initChart: function(chartData) {

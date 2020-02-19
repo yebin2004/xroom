@@ -51,13 +51,12 @@ import CardShareholder from './CardShareholder.vue';
 import CardMember from './CardMember.vue';
 import CardNews from './CardNews.vue';
 import ChartIPCircle from './ChartIPCircle.vue';
-const tempEnterpriseData = require('../../assets/data/enterprise.json');
 import { getCompany } from '../utils/api';
 export default {
-  name: 'enteCredit',
+  name: 'EnteCredit',
   data: function() {
     return {
-      enterpriseData: tempEnterpriseData,
+      enterpriseData: {},
       companyName: this.$store.state.companyName
     };
   },
@@ -72,41 +71,8 @@ export default {
   mounted: function() {
     console.debug('companyName', this.$store.state);
     getCompany({ name: this.companyName }).then(res => {
-      if (res.rmCompany == null) {
-        this.$router.push('/404');
-      } else {
-        this.fillData(res.rmCompany);
-      }
+      this.enterpriseData = res;
     });
-  },
-  methods: {
-    fillData: function(data) {
-      let newData = tempEnterpriseData;
-      newData.enteName = data.name;
-      newData.basic[0].info['社会统一信用代码'] = data.creditCode;
-      newData.basic[0].info['公司类型'] = data.econKind;
-      newData.basic[0].info['注册资本'] = data.registCapi;
-      newData.basic[1].info['组织机构代码'] = data.orgNo;
-      newData.basic[1].info['成立日期'] = this.formatDate(data.startDate);
-      newData.basic[1].info['发照日期'] = this.formatDate(data.checkDate);
-      newData.basic[2].info['注册号'] = data.no;
-      newData.basic[2].info['法定代表人'] = data.operName;
-      newData.basic[2].info['登记机关'] = data.belongOrg;
-      newData.basic[3].info['经营状态'] = data.status;
-      newData.basic[3].info['营业期限'] =
-        this.formatDate(data.termStart) + '至' + (data.teamEnd == '' ? '无固定期限' : this.formatDate(data.teamEnd));
-      newData.basic[3].info['企业地址'] = data.address;
-      newData.busiScope = data.scope;
-    },
-    formatDate: function(date) {
-      if (date == '') return;
-      return (
-        date
-          .substring(0, 10)
-          .replace('-', '年')
-          .replace('-', '月') + '日'
-      );
-    }
   }
 };
 </script>

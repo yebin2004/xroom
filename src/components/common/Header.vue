@@ -71,8 +71,7 @@ export default {
   methods: {
     logout: function() {
       logout().then(
-        res => {
-          console.log('logout res', res);
+        () => {
           this.$store.dispatch('UserLogout');
           this.$router.push('/login');
         },

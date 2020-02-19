@@ -92,7 +92,6 @@ export default {
   },
   methods: {
     submitForm: function() {
-      console.log('username', this.userName);
       login({ username: this.userName, password: this.userPassword }).then(
         res => {
           console.log('login res', res);

@@ -36,7 +36,6 @@
 <script>
 import NavSearch from '../common/NavSearch.vue';
 import CardEnteValue from '../ente-compat/CardEnteValue.vue';
-const mockEnteCompatData = require('../../assets/mock/ente-compat.json');
 import { getCompet, searchCompet } from '../utils/api';
 import { loading } from '../common/mixin/loading';
 export default {
@@ -46,7 +45,7 @@ export default {
     return {
       comId: null,
       comName: '',
-      enteCompatList: mockEnteCompatData,
+      enteCompatList: [],
       competIndex: []
     };
   },
@@ -81,26 +80,14 @@ export default {
       }
       promise
         .then(res => {
-          console.debug('res', res);
-          if (res.rmCompet == null) {
-            this.nofound = true;
-          } else {
-            this.comId = res.rmCompet.comId;
-            this.comName = res.rmCompet.comName;
-            this.compet = this.assemCompet(res.rmCompet);
-            this.$store.dispatch('CompanyName', this.comName);
-            console.debug('companyNameset', this.$store.state);
-          }
+          this.comId = res.comId;
+          this.comName = res.comName;
+          this.enteCompatList = res.rmCompet;
+          this.$store.dispatch('CompanyName', this.comName);
         })
         .finally(() => {
           this.setLoading(false);
-          if (this.nofound) this.$router.push('/404');
         });
-    },
-    assemCompet: function(rmCompet) {
-      this.enteCompatList[0].items[3].value = rmCompet.workerNumber;
-      this.enteCompatList[3].items[1].value = rmCompet.salesExpenses;
-      //this.compet[4].items[0] = rmCompet.tecStaffProportion;
     }
   }
 };

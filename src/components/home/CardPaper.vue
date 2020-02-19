@@ -5,7 +5,7 @@
       <span class="my-header-title">战略规划库</span>
       <div
         class="header-arrow text-hide"
-        onclick=" window.location.href='http://baogao.qdefense.cn/'"
+        onclick=" window.location.href='paper-db'"
       ></div>
     </div>
     <div class="my-card-body py-1 d-flex flex-column align-items-left">
@@ -14,7 +14,7 @@
         :key="item.paperId"
         v-bind:class="{'my-dark-bg': index % 2 === 0}"
         class="my-card-item d-flex flex-column py-1 pr-2"
-        onclick=" window.location.href='http://baogao.qdefense.cn/'"
+        onclick=" window.location.href='paper'"
       >
         <div class="article  d-flex pl-2">
           <div class="icon1 text-hide"></div>
