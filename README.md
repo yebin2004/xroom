@@ -34,10 +34,10 @@
 
 &nbsp;
 ## 安装及快速开始
-- 下载代码：。
+- 下载代码
   - git clone https://github.com/yebin2004/xroom.git
 
-- 进入代码目录并安装依赖：
+- 进入代码目录并安装依赖
   - cd xroom
   - npm install
 
