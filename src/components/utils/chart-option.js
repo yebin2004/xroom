@@ -24,7 +24,7 @@ export default {
         top: '2%',
         bottom: -15,
         right: 15,
-        left: -40,
+        left: -35,
         containLabel: true
       },
       xAxis: {
@@ -48,8 +48,8 @@ export default {
           interval: 0,
           color: '#fff',
           align: 'left',
-          margin: 65,
-          fontSize: 13,
+          margin: 55,
+          fontSize: 12,
           formatter: function (value) {
             //return '{title|' + value + '}'
             return value
@@ -57,7 +57,7 @@ export default {
 
           rich: {
             title: {
-              width: '10%'
+              width: '12%'
             }
           }
         },
@@ -79,7 +79,7 @@ export default {
           interval: 0,
           align: 'left',
           margin: 5,
-          fontSize: 13,
+          fontSize: 12,
           formatter: function (value) {
             return value
           },
