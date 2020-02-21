@@ -51,7 +51,7 @@
       </div>
       <!--row-->
       <div class="login-footer mx-auto p-0 border-0 mb-1">
-        <span>量子防务全网作战室&copy; 版权所有</span>
+        <span>XXXX全网作战室&copy; 版权所有</span>
       </div>
     </div>
     <Toasts
